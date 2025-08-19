@@ -5,6 +5,7 @@ const getKPIs = require('../../shared/services/getKPIs');
 const { addSnapshot, loadHistory } = require('../../shared/services/historyStore');
 const generateSummary = require('../../shared/services/generateSummary');
 const analyzeHistory = require('../../shared/services/analyzeHistory');
+const detectEmergingTrends = require('../../shared/services/detectEmergingTrends');
 
 (async () => {
   const today = format(new Date(), 'MMMM dd, yyyy');
@@ -26,5 +27,10 @@ const analyzeHistory = require('../../shared/services/analyzeHistory');
     if (avg.average !== null) {
       logMessage('CEO OS', `${avg.title} average over last ${avg.periodDays} days: ${avg.average}${avg.title.includes('%') ? '%' : ''}`);
     }
+  });
+
+  const emerging = detectEmergingTrends(history, 3);
+  emerging.forEach(t => {
+    logMessage('CEO OS', `Emerging Trend: ${t.title} trending ${t.direction} for ${t.streak} consecutive runs.`);
   });
 })();

@@ -5,9 +5,9 @@ const { setHealth } = require('./health');
 module.exports = async function getLatestPipelineMetric() {
   try {
     const res = await fetch('https://api.example.com/pipeline-metric', {
-      headers: { 'Authorization': \`Bearer \${config.crmApiKey}\` }
+      headers: { 'Authorization': `Bearer ${config.crmApiKey}` }
     });
-    if (!res.ok) throw new Error(\`API returned status \${res.status}\`);
+    if (!res.ok) throw new Error(`API returned status ${res.status}`);
     const data = await res.json();
     setHealth('pipelineMetric', 'ok');
     return {

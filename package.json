@@ -13,7 +13,8 @@
     "start:dashboard": "node apps/dashboard/index.js",
     "start:morning-brief": "node apps/morning-brief/index.js",
     "morning-brief": "node apps/morning-brief/index.js",
-    "send-brief": "node apps/morning-brief/sendBrief.js"
+    "send-brief": "node apps/morning-brief/sendBrief.js",
+    "web-brief": "node apps/web-brief/server.js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
   "dependencies": {
     "axios": "^1.11.0",
     "dotenv": "^17.2.1",
+    "express": "^5.1.0",
     "node-fetch": "^2.7.0",
     "nodemailer": "^7.0.5"
   }

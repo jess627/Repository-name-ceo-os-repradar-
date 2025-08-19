@@ -1,0 +1,1 @@
+{\n  "env": { "browser": true, "es2021": true },\n  "extends": ["eslint:recommended"],\n  "rules": {}\n}

@@ -4,6 +4,7 @@ const config = require('../../shared/config');
 const getKPIs = require('../../shared/services/getKPIs');
 const { addSnapshot, loadHistory } = require('../../shared/services/historyStore');
 const generateSummary = require('../../shared/services/generateSummary');
+const analyzeHistory = require('../../shared/services/analyzeHistory');
 
 (async () => {
   const today = format(new Date(), 'MMMM dd, yyyy');
@@ -19,5 +20,11 @@ const generateSummary = require('../../shared/services/generateSummary');
 
   const summary = generateSummary(currentKPIs);
   logMessage('CEO OS', `Executive Summary: ${summary}`);
-  logMessage('CEO OS', `KPI history entries: ${history.length}`);
+
+  const medTerm = analyzeHistory(history, 7);
+  medTerm.forEach(avg => {
+    if (avg.average !== null) {
+      logMessage('CEO OS', `${avg.title} average over last ${avg.periodDays} days: ${avg.average}${avg.title.includes('%') ? '%' : ''}`);
+    }
+  });
 })();

@@ -9,7 +9,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:ceo-os": "node apps/ceo-os/index.js",
-    "start:repradar": "node apps/repradar/index.js"
+    "start:repradar": "node apps/repradar/index.js",
+    "start:dashboard": "node apps/dashboard/index.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/jess627/Repository-name-ceo-os-repradar-/issues"
   },
-  "homepage": "https://github.com/jess627/Repository-name-ceo-os-repradar-#readme"
+  "homepage": "https://github.com/jess627/Repository-name-ceo-os-repradar-#readme",
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "node-fetch": "^2.7.0"
+  }
 }

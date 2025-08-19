@@ -10,7 +10,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:ceo-os": "node apps/ceo-os/index.js",
     "start:repradar": "node apps/repradar/index.js",
-    "start:dashboard": "node apps/dashboard/index.js"
+    "start:dashboard": "node apps/dashboard/index.js",
+    "start:morning-brief": "node apps/morning-brief/index.js"
   },
   "repository": {
     "type": "git",

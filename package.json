@@ -12,7 +12,8 @@
     "start:repradar": "node apps/repradar/index.js",
     "start:dashboard": "node apps/dashboard/index.js",
     "start:morning-brief": "node apps/morning-brief/index.js",
-    "morning-brief": "node apps/morning-brief/index.js"
+    "morning-brief": "node apps/morning-brief/index.js",
+    "send-brief": "node apps/morning-brief/sendBrief.js"
   },
   "repository": {
     "type": "git",
@@ -26,7 +27,9 @@
   },
   "homepage": "https://github.com/jess627/Repository-name-ceo-os-repradar-#readme",
   "dependencies": {
+    "axios": "^1.11.0",
     "dotenv": "^17.2.1",
-    "node-fetch": "^2.7.0"
+    "node-fetch": "^2.7.0",
+    "nodemailer": "^7.0.5"
   }
 }

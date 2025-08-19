@@ -1,0 +1,25 @@
+{
+  "name": "repository-name-ceo-os-repradar-",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:ceo-os": "node apps/ceo-os/index.js",
+    "start:repradar": "node apps/repradar/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jess627/Repository-name-ceo-os-repradar-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jess627/Repository-name-ceo-os-repradar-/issues"
+  },
+  "homepage": "https://github.com/jess627/Repository-name-ceo-os-repradar-#readme"
+}
